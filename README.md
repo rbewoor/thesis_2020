@@ -13,6 +13,8 @@ Implementation in Python3 in Anaconda environments.
 
 The models were: 1) Pre-trained STT DeepSpeech verion 0.7.3 which was accessed via pip installing necessary package and downloading the model 2) Object detection model defined by loading the pre-trained model weights and then saved as a keras model: file "saved_keras_model.tar.gz" 3) Image caption model WITHOUT-attention trained and saved the weights for reloading the model later: file "yoloWeights.tar.gz" 4) Image caption model WITH-attenion trained and saved the checkpoint files for reloading model later: file "Thesis_ImgCapATTENTION_ChkPts_In_Run4_Ep19.tar.gz" 5) GPT-2 model fine-tuned on 11 files of CBT dataset and then saved the checkpoints for reloading later: file "Run2_File11_2_checkpoint_run2.tar.gz"
 
+For the image captioning model, the training was done with the 2017 version of the MS-COCO dataset. Thus the json annotations file for train and val were used.
+
 Environment setup related.
 1) Different Anaconda environments were setup for different parts of the code execution. See file for environment setup: conda_environment_setup_20201111.txt
 
