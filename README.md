@@ -50,15 +50,15 @@ Scripts and files:
 	CompDict_ImgCapATTEND_Run4_Ep21_BleuScore_With_GT.pkl
 15) Weights file, WITHOUT-attention model:
 	Decoder_Run_3_Wt_ep_18.h5
-16) Weights file, object detector downloaded from https://pjreddie.com/media/files/yolov3.weights:
+16) Weights file, object detector downloaded from https://pjreddie.com/media/files/yolov3.weights (not uploaded to Github due to size):
 	yoloWeights.tar.gz
-17) Saved keras model for object detector reloading:
+17) Saved keras model for object detector reloading (not uploaded to Github due to size):
 	saved_keras_model.tar.gz
-18) Checkpoint files to reload fine-tuned GPT-2 model:
+18) Checkpoint files to reload fine-tuned GPT-2 model (not uploaded to Github due to size):
 	Run2_File11_2_checkpoint_run2.tar.gz
 19) The 11 files from CBT dataset used to fine-tune medium GPT-2 model:
 	all files in folder "CBT_fineTune_GPT2"
-20) Checkpoint files to reload with-attention model:
+20) Checkpoint files to reload with-attention model (not uploaded to Github due to size):
 	Thesis_ImgCapATTENTION_ChkPts_In_Run4_Ep19.tar.gz
 21) Pickle file, for WITHOUT-attention model, the word-to-index dictionary data structure:
 	wordtoix_train_97000.pkl
@@ -79,6 +79,6 @@ Scripts and files:
 29) Plot of model for decoder of WITHOUT-attention model:
 	ImgCap_RNN_Decoder_model3_plot_1.png
 30) Save the encodings of the images to avoid bottleneck layer speed issues (for WITHOUT-attention model):
-	ImgCapTraining_Train2017_onlyEncoding_1
-31) Annotations files for the Train and Validation splits of the original COCO2017 dataset (approx. 118k images in Train split and 5k images in Validation split):
+	ImgCapTraining_Train2017_onlyEncoding_1.ipynb
+31) Annotations files for the Train and Validation splits of the original COCO2017 dataset (approx. 118k images in Train split and 5k images in Validation split) (not uploaded to Github due to size):
 	captions_train2017.json    ,    captions_val2017.json
