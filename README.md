@@ -1,19 +1,20 @@
 # thesis_2020
 Master thesis work as part of M.Sc. Big Data and Business Analytics coursework
 
-This document explains the various files part of this CD/DVD that were used in the implementation of the master thesis work over the period June-Nov 2020.
-Please refer the report and coloquium presentation for complete details.
+This document explains the various files used in the implementation of the master thesis work over the period June-Nov 2020.
+Please refer to the coloquium presentation for some high level details.
 
 Goal was to design and implement "Automated story generation based on voice input description from user".
 
-Implementation done by weaving together multiple neural networks to process the data in stages. One time setup of a Neo4j database containing which objects are in which images is required (not part of this CD). Then scripts to: a) Perform STT b) Id key elements c) Retrieve images user selection of images d) Perform Image Captioning e) Selection of images and optional correction of captions f) Generate story.
+Implementation done by weaving together multiple neural networks to process the data in stages. One time setup of a Neo4j database containing which objects are in which images was required. Then scripts to: a) Perform STT b) Id key elements c) Retrieve images user selection of images d) Perform Image Captioning e) Selection of images and optional correction of captions f) Generate story.
 
-GUI implemented via Tkinter for a) Wav file recording, playback and confirm during STT stage b) Key elements display and selection c) Selection of retrieved images with optional object detection d) Selection of images with optional correction of captions. No GUI for the final story generation stage.
+GUI implemented with Tkinter for a) STT stage: Wav file recording, playback and confirmation  b) Id Key elements stage: display and selection c) Images from database retrieval stage: selection with optional object detection d) Image caption generation stage: view images and captions with optional correction of captions.
+No GUI for the final story generation stage.
 Implementation in Python3 in Anaconda environments.
 
-The models were: 1) Pre-trained STT DeepSpeech verion 0.7.3 which was accessed via pip installing necessary package and downloading the model 2) Object detection model defined by loading the pre-trained model weights and then saved as a keras model: file "saved_keras_model.tar.gz" 3) Image caption model WITHOUT-attention trained and saved the weights for reloading the model later: file "yoloWeights.tar.gz" 4) Image caption model WITH-attenion trained and saved the checkpoint files for reloading model later: file "Thesis_ImgCapATTENTION_ChkPts_In_Run4_Ep19.tar.gz" 5) GPT-2 model fine-tuned on 11 files of CBT dataset and then saved the checkpoints for reloading later: file "Run2_File11_2_checkpoint_run2.tar.gz"
+The models were: 1) Pre-trained STT DeepSpeech version 0.7.3 (via pip instal of package and downloading the model) 2) Object detection model defined by loading the pre-trained model weights and then saved as a keras model: file "saved_keras_model.tar.gz" 3) Image caption model WITHOUT-attention trained and saved the weights for reloading the model later: file "Decoder_Run_3_Wt_ep_18.h5" 4) Image caption model WITH-attenion trained and saved the checkpoint files for reloading model later: file "Thesis_ImgCapATTENTION_ChkPts_In_Run4_Ep19.tar.gz" 5) GPT-2 model fine-tuned on 11 files of CBT dataset and then saved the checkpoints for reloading later: file "Run2_File11_2_checkpoint_run2.tar.gz"
 
-For the image captioning model, the training was done with the 2017 version of the MS-COCO dataset. Thus the json annotations file for train and val were used.
+For the image captioning model, the training was done with MS-COCO 2017 version. Ground truth captions were available in the train and val json annotations files.
 
 Environment setup related.
 1) Different Anaconda environments were setup for different parts of the code execution. See file for environment setup: conda_environment_setup_20201111.txt
