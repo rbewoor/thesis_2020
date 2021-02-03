@@ -1,5 +1,6 @@
 # thesis_2020
 Master thesis work as part of M.Sc. Big Data and Business Analytics coursework over the period June 2020 to November 2020.
+Thesis presentation link: https://github.com/rbewoor/thesis_2020/blob/main/Presentation/RKB-11011831-Thesis-Colloquium-Presentation.pdf 
 
 This document explains the various files used in the implementation of the master thesis work over the period June-Nov 2020.
 Please refer to the coloquium presentation for some high level details.
