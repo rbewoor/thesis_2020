@@ -4,9 +4,9 @@ Master thesis work as part of M.Sc. Big Data and Business Analytics coursework o
 This document explains the various files used in the implementation of the master thesis work over the period June-Nov 2020.
 Please refer to the coloquium presentation for some high level details.
 
-Goal was to design and implement "Automated story generation based on voice input description from user".
+Goal was to design and implement "Story generation for young children by accepting a voice input description from user".
 
-Implementation done by weaving together multiple neural networks to process the data in stages. One time setup of a Neo4j database containing which objects are in which images was required. Then scripts to: a) Perform STT b) Id key elements c) Retrieve images user selection of images d) Perform Image Captioning e) Selection of images and optional correction of captions f) Generate story.
+Implementation done by weaving together multiple neural networks to process the data in stages. One time setup of a Neo4j database containing information about which objects are in which images was required. The pipeline consisted of: a) Perform Speech-to-Text (STT) b) Id key elements c) Retrieve images user selection of images d) Perform Image Captioning e) Selection of images and optional correction of captions f) Generate story.
 
 GUI implemented with Tkinter for a) STT stage: Wav file recording, playback and confirmation  b) Id Key elements stage: display and selection c) Images from database retrieval stage: selection with optional object detection d) Image caption generation stage: view images and captions with optional correction of captions.
 No GUI for the final story generation stage.
